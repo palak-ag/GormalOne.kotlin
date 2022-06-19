@@ -1,0 +1,17 @@
+import java.util.*
+ 
+fun main() {
+ 
+    val read = Scanner(System.`in`)
+ 
+    println("Enter number:")
+    val numb = read.nextInt()
+ 
+    var factorial: Long = 1
+ 
+    for(curNum in 1..numb) {
+        factorial *= curNum
+    }
+ 
+    println("Factorial of $numb is $factorial")
+}
