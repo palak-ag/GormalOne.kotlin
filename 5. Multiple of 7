@@ -1,14 +1,21 @@
+//5. Write a program to display the 1, 2, and 4 multiple of 7 which gives the remainder 1
+//when divided by 2, 3, 4, 5 and 6
+
 import java.util.*
  
 fun main() {
  
     var count = 0;
     var a = 7
+    
+    //Running the loop to find three required outputs
     while(count<4){
         
         if((a%2==1) && (a%3==1) && (a%4==1) && (a%5==1) && (a%6==1)){
             
             count = count+1
+            
+            //Checking the condition to skip the 3rd output
             if(count==3){
                 continue
             }
