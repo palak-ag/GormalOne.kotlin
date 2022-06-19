@@ -1,6 +1,8 @@
 // 4. Write a program to find the LCM of any number of numbers.
 
-fun gcd(a: Int, b: Int): Int {
+
+//function to find gcd of a and b
+fun gcd(a: Int, b: Int): Int {  
 	if (b == 0)
 		return a;
 	return gcd(b, a % b);
@@ -21,19 +23,20 @@ fun findLCM(ar: ArrayList<Int>): Int
 	return ans;
 }
 
-// Driver Code
 fun main (){
-    var arrayint = ArrayList<Int>()
+    var arrayint = ArrayList<Int>()  //initializing an array
     var x = 0
+    //taking input for the size of the array
     val abc = Integer.valueOf(readLine())  
- 
+    
+    //taking the input for the array
     while( x < abc)
     {
         var t = readLine()!!.toInt()
         arrayint.add(t)
         x++
     }
-    var res = findLCM(arrayint)
+    var res = findLCM(arrayint)  
     
     println("LCM is: $res")
 }
