@@ -1,23 +1,32 @@
 //1. Write a program to calculate the factorial of a number.
+
 import java.util.*
  
 fun main() {
  
     val read = Scanner(System.`in`)
- 
-    println("Enter number:") //Asking the user to give the input
-    val numb = read.nextInt() //Reading the input from the user 
-    if(numb<0){   //Checking the condition if factorial is possible or not
+    
+    //Asking the user to give the input
+    println("Enter number:") 
+    
+    //Reading the input from the user
+    val numb = read.nextInt()  
+    
+    //Checking the condition if factorial is possible or not
+    if(numb<0){   
         println("Wrong Input !! Please enter positive integer.")
     }
     else{
         var factorial: Long = 1
      
         for(curNum in 1..numb) { 
-            factorial *= curNum  //Calculating the factorial
+            
+            //Calculating the factorial
+            factorial *= curNum  
         }
      
-        println("Factorial of $numb is $factorial") //Printing the factorial of the number
+        //Printing the factorial of the number
+        println("Factorial of $numb is $factorial") 
     }
     
 }
