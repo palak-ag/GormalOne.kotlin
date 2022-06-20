@@ -5,23 +5,26 @@ import java.util.*
  
 fun main() {
  
-    var count = 0;
-    var a = 7
+    var count = 0
+    var a =0
     
     //Running the loop to find three required outputs
     while(count<4){
-        
+        a+=7
         if((a%2==1) && (a%3==1) && (a%4==1) && (a%5==1) && (a%6==1)){
             
-            count = count+1
+            count+=1
+          
             
             //Checking the condition to skip the 3rd output
-            if(count==3){
+            if(count == 3){
                 continue
             }
-            println(a)
+            else
+             println(a)
+             
             
         }
-        a+=7
+        
     }
 }
