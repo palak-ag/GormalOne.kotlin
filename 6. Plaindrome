@@ -13,10 +13,12 @@ fun isPalindrome(value: String): Boolean{
     var result: Boolean = true
     
     for(i in value.length -1 downTo 0){
+    
     //checking the ith character and length-1-i th character
     //if they are equal will continue
     //else will make result as false and break the loop
     //it shows that the string is not a palindrome 
+    
         if(value[i] != value[value.length-1-i]){
             result = false
             break
