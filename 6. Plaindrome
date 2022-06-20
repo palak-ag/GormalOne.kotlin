@@ -5,12 +5,18 @@
 import java.util.*
 
 //function to check if the string is palindrome or not
-//
+//it is "CASE SENSITIVE" 
+//INPUT : I did, did I ? -> palindrome
+//INPUT : I Did, did I ? -> not a palindrome 
 fun isPalindrome(value: String): Boolean{
 
     var result: Boolean = true
     
     for(i in value.length -1 downTo 0){
+    //checking the ith character and length-1-i th character
+    //if they are equal will continue
+    //else will make result as false and break the loop
+    //it shows that the string is not a palindrome 
         if(value[i] != value[value.length-1-i]){
             result = false
             break
@@ -23,24 +29,28 @@ fun isPalindrome(value: String): Boolean{
  
 fun main() {
     
-
+    //taking the input from the user 
     var stringInput = readLine()!!.toString()
-    //println("You entered: $stringInput")
     
+    // storing all the special characters in a variable 
     var special = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
     
+    
+
     for (i in stringInput){
+        //if the character is in special character we will replace it with empty string 
         if (i in special){
             stringInput = stringInput.replace(i.toString(),"")
         }
     }
     
     
-    var x = isPalindrome(stringInput)
     
-    if(x){
+    //if the result is true, its a palindrome
+    if(isPalindrome(stringInput)){
         println("The string is a Palindrome !!")
     }
+    //else it is not
     else{
         println("The string is not a Palindrome !!")
     }
