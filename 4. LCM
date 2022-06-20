@@ -15,7 +15,7 @@ fun findLCM(ar: ArrayList<Int>): Int
 	var ans = ar.get(0);
 
 	// ans contains LCM of arr[0], ..arr[i]
-	// after i'th iteration,
+	// after ith iteration,
 	for (i in ar)
 		ans = (((i * ans)) /
 				(gcd(i, ans)));
@@ -26,6 +26,7 @@ fun findLCM(ar: ArrayList<Int>): Int
 fun main (){
     var arrayint = ArrayList<Int>()  //initializing an array
     var x = 0
+    
     //taking input for the size of the array
     val abc = Integer.valueOf(readLine())  
     
@@ -36,6 +37,8 @@ fun main (){
         arrayint.add(t)
         x++
     }
+    
+    //passing the array to findLCM function to calculate the LCM of the numbers in the array.
     var res = findLCM(arrayint)  
     
     println("LCM is: $res")
