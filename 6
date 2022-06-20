@@ -1,0 +1,49 @@
+//6. Write a program to check whether a sentence is palindrome or not.
+//For e.g.,: “I did, did I?”
+
+
+import java.util.*
+
+//function to check if the string is palindrome or not
+//
+fun isPalindrome(value: String): Boolean{
+
+    var result: Boolean = true
+    
+    for(i in value.length -1 downTo 0){
+        if(value[i] != value[value.length-1-i]){
+            result = false
+            break
+        }
+    }
+    return result 
+    
+    
+}
+ 
+fun main() {
+    
+
+    var stringInput = readLine()!!.toString()
+    //println("You entered: $stringInput")
+    
+    var special = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+    
+    for (i in stringInput){
+        if (i in special){
+            stringInput = stringInput.replace(i.toString(),"")
+        }
+    }
+    
+    
+    var x = isPalindrome(stringInput)
+    
+    if(x){
+        println("The string is a Palindrome !!")
+    }
+    else{
+        println("The string is not a Palindrome !!")
+    }
+    
+}
+
